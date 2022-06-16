@@ -4,19 +4,20 @@ import { useState, useEffect } from "react";
 import MovieCard from "./component/MovieCard";
 // import Navbar from "./component/Navbar";
 
-import { Button, Container, Navbar, Nav } from "react-bootstrap";
+import { Container, Navbar, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/App.css";
 import searchIcon from "./assets/search.svg";
 
 const API_URL =
   "https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";
-const movie1 = {
-  image:
-    "https://s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/495/original/open-uri20171223-4-9hrto4?1514063330",
-  year: "2022",
-  title: "Amazing action movie",
-};
+
+// const movie1 = {
+//   image:
+//     "https://s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/495/original/open-uri20171223-4-9hrto4?1514063330",
+//   year: "2022",
+//   title: "Amazing action movie",
+// };
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -37,14 +38,13 @@ const App = () => {
     <div>
       {/* <Navbar /> */}
 
-      <Navbar bg="primary" variant="dark">
+      <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Homee</Nav.Link>
+            <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <Nav.Link href="#pricing">Offer</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
