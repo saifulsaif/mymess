@@ -9,9 +9,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/App.css";
 import searchIcon from "./assets/search.svg";
 
-const API_URL =
-  "https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import Login from "./pages/Login";
 
+const API_URL = "https://ownlikee.ownmat.com/api/brand";
 // const movie1 = {
 //   image:
 //     "https://s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/495/original/open-uri20171223-4-9hrto4?1514063330",
@@ -24,10 +25,9 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const searchMovies = async (name) => {
-    const response = await fetch(`${API_URL}&s=${name}`);
+    const response = await fetch(`${API_URL}`);
     const data = await response.json();
-    console.log(name);
-    setMovies(data);
+    setMovies(data.payload);
   };
 
   useEffect(() => {
@@ -50,6 +50,11 @@ const App = () => {
       </Navbar>
 
       <div className="app">
+        {/* <Router>
+          <Route exact path="/" component={App} />
+          <Route exact path="/login" component={Login} />
+        </Router> */}
+
         <h1>Products Home</h1>
         <div className="search">
           <input

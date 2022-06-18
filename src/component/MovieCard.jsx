@@ -5,16 +5,16 @@ const MovieCard = ( {movie1} ) => {
         <div className="movie">
             <div>
                 <p>
-                    {movie1.price}
+                    {movie1.description}
                 </p>
             </div>
 
             <div>
-                <img src={movie1.image_link} alt={movie1.name}/>
+                <img src={movie1.image} alt={movie1.brand_name}/>
             </div>
             <div>
                 <h3>
-                    {movie1.name}
+                    {movie1.brand_name}
                 </h3>
             </div>
        </div>
