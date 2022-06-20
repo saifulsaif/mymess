@@ -6,22 +6,16 @@ const Header = () => {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <NavLink to="/login">Login</NavLink>
           <Nav className="me-auto">
-            <NavLink to="/product">Product</NavLink>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link as={NavLink} to="/product">
+              Product
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/login">
+              Login
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
-      <ul>
-        <li>
-          <NavLink to="/login">Login</NavLink>
-        </li>
-        <li>
-          <NavLink to="/product">Product</NavLink>
-        </li>
-      </ul>
     </>
   );
 };
